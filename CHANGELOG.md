@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-06-23
+
+### Added
+
+- MIT license (`LICENSE` file and `license` field in `package.json`).
+
 ## [1.0.0] - 2026-06-23
 
 ### Added
@@ -20,4 +26,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Design tokens: four OKLCH color palettes (Mata Atlântica, Barro Nordestino,
   Areia Sertaneja, Urucum Amazônico) and three self-hosted typefaces.
 
+[1.0.1]: https://github.com/rafaelsamico/cadus-ds/releases/tag/v1.0.1
 [1.0.0]: https://github.com/rafaelsamico/cadus-ds/releases/tag/v1.0.0
