@@ -2,6 +2,7 @@ import path from "path"
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
+import dts from "vite-plugin-dts"
 
 export default defineConfig(({ mode }) => {
   const isLib = mode === 'lib'
@@ -9,7 +10,15 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
-      tailwindcss()
+      tailwindcss(),
+      ...(isLib
+        ? [dts({
+            tsconfigPath: './tsconfig.app.json',
+            entryRoot: path.resolve(__dirname, 'src'),
+            include: ['src'],
+            exclude: ['src/App.tsx', 'src/main.tsx'],
+          })]
+        : []),
     ],
     resolve: {
       alias: {
